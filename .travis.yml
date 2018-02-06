@@ -8,4 +8,5 @@ cache:
 before_script:
   - npm i
 srcipt:
-  - protractor config/protractor.conf.ts
+  - protractor -h
+  - protractor config/portractor.conf.ts

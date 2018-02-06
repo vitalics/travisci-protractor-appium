@@ -1,13 +1,14 @@
 const path = require('path');
 
 exports.config = {
+  seleniumAddress: 'http://127.0.0.1:4444/wd/hub',
   specs: '../test/specs/**/*.spec.ts',
   capabilities: {
     browserName: 'chrome',
     chromeOptions: { args: [ '--disable-popup-blocking', '--disable-translate', '--headless' ] }
   },
   skipSourceMapSupport: true,
-  // directConnect: true,
+  directConnect: true,
   maxSessions: 15,
   allScriptsTimeout: 600000,
   getPageTimeout: 600000,

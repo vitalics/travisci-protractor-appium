@@ -7,7 +7,7 @@ exports.config = {
     chromeOptions: { args: [ '--disable-popup-blocking', '--disable-translate', '--headless' ] }
   },
   skipSourceMapSupport: true,
-  directConnect: true,
+  // directConnect: true,
   maxSessions: 15,
   allScriptsTimeout: 600000,
   getPageTimeout: 600000,

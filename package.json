@@ -6,7 +6,6 @@
   "scripts": {
     "preinstall": "npm i -g ts-node typescript tslint node-gyp protractor",
     "update:chrome": "node ./node_modules/webdriver-manager/bin/webdriver-manager update --chrome",
-    "appium": "appium",
     "check": "tslint -c tslint.json -p tsconfig.json 'test/**/*.ts'",
     "test": "npm run check && npm run update:chrome && protractor ./config/protractor.conf.ts",
     "pre-start-webdriver": "./node_modules/.bin/webdriver-manager update --android --android-accept-licenses",
@@ -15,14 +14,11 @@
   "devDependencies": {
     "@types/jasmine": "^2.8.4",
     "allure-commandline": "^2.5.0",
-    "appium": "^1.7.2",
-    "di-typescript": "^1.1.4",
     "jasmine": "^2.8.0",
     "jasmine-allure-reporter": "^1.0.2",
     "jasmine-node": "^1.14.5",
     "jasmine-spec-reporter": "^4.2.1",
     "protractor": "^5.2.2",
-    "reflect-metadata": "^0.1.12",
     "ts-node": "^4.1.0",
     "tsconfig-paths": "^3.1.1",
     "tslint": "^5.9.1",

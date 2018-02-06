@@ -1,0 +1,43 @@
+{
+  "name": "travisci-protractor-appium",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "preinstall": "npm i -g appium ts-node typescript tslint node-gyp",
+    "appium": "appium",
+    "check": "tslint -c tslint.json -p tsconfig.json 'test/**/*.ts'",
+    "test": "npm run check && protractor config/protractor.conf.ts",
+    "pre-start-webdriver": "./node_modules/.bin/webdriver-manager update --android --android-accept-licenses",
+    "start-webdriver": "./node_modules/.bin/webdriver-manager start --android"
+  },
+  "devDependencies": {
+    "@types/jasmine": "^2.8.4",
+    "allure-commandline": "^2.5.0",
+    "appium": "^1.7.2",
+    "di-typescript": "^1.1.4",
+    "jasmine": "^2.8.0",
+    "jasmine-allure-reporter": "^1.0.2",
+    "jasmine-node": "^1.14.5",
+    "jasmine-spec-reporter": "^4.2.1",
+    "protractor": "^5.2.2",
+    "reflect-metadata": "^0.1.12",
+    "ts-node": "^4.1.0",
+    "tsconfig-paths": "^3.1.1",
+    "tslint": "^5.9.1",
+    "typescript": "^2.6.2",
+    "webdriver-manager": "^12.0.6"
+  },
+  "dependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vitalics/travisci-protractor-appium.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vitalics/travisci-protractor-appium/issues"
+  },
+  "homepage": "https://github.com/vitalics/travisci-protractor-appium#readme"
+}

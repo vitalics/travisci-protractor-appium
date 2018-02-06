@@ -5,9 +5,7 @@ exports.config = {
   specs: [ '../test/specs/**/*.spec.ts' ],
   capabilities: {
     browserName: 'chrome',
-    platformName: 'Android',
-    deviceName: 'emulator-5554',
-    chromeOptions: { args: [ '--disable-popup-blocking', '--disable-translate' ] }
+    chromeOptions: { args: [ '--disable-popup-blocking', '--disable-translate', '--headless' ] }
   },
   skipSourceMapSupport: true,
 

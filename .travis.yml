@@ -2,12 +2,10 @@ language: node_js
 node_js:
   - "8"
 cache:
+  timeout: 1000
   directories:
     - "node_modules"
 before_script:
   - npm i
-  - npm run pre-start-webdriver &
-  - npm run start-webdriver &
-  - appium &
 srcipt:
   - protractor config/protractor.conf.ts

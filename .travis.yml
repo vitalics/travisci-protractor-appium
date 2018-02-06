@@ -6,5 +6,4 @@ cache:
   directories:
     - "node_modules"
 srcipt:
-  - protractor -h
-  - protractor config/portractor.conf.ts
+  - npm test

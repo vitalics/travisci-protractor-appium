@@ -7,7 +7,7 @@
     "preinstall": "npm i -g ts-node typescript tslint node-gyp protractor",
     "appium": "appium",
     "check": "tslint -c tslint.json -p tsconfig.json 'test/**/*.ts'",
-    "test": "npm run check && protractor config/protractor.conf.ts",
+    "test": "npm run check && protractor config/protractor.conf.js",
     "pre-start-webdriver": "./node_modules/.bin/webdriver-manager update --android --android-accept-licenses",
     "start-webdriver": "./node_modules/.bin/webdriver-manager start --android"
   },

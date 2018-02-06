@@ -5,9 +5,10 @@
   "main": "index.js",
   "scripts": {
     "preinstall": "npm i -g ts-node typescript tslint node-gyp protractor",
+    "update:chrome": "node ./node_modules/webdriver-manager/bin/webdriver-manager update --chrome",
     "appium": "appium",
     "check": "tslint -c tslint.json -p tsconfig.json 'test/**/*.ts'",
-    "test": "npm run check && protractor config/protractor.conf.ts",
+    "test": "npm run check && npm run update:chrome && protractor ./config/protractor.conf.ts",
     "pre-start-webdriver": "./node_modules/.bin/webdriver-manager update --android --android-accept-licenses",
     "start-webdriver": "./node_modules/.bin/webdriver-manager start --android"
   },

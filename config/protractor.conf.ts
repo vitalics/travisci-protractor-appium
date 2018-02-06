@@ -1,7 +1,7 @@
 const path = require('path');
 
 exports.config = {
-  specs: './test/specs/**/*.spec.ts',
+  specs: '../test/specs/**/*.spec.ts',
   capabilities: {
     browserName: 'chrome',
     chromeOptions: { args: [ '--disable-popup-blocking', '--disable-translate', '--headless' ] }

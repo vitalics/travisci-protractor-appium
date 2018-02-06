@@ -1,14 +1,13 @@
 const path = require('path');
 
 exports.config = {
-  seleniumAddress: 'http://localhost:4723/wd/hub',
-  specs: [ '../test/specs/**/*.spec.ts' ],
+  specs: './test/specs/**/*.spec.ts',
   capabilities: {
     browserName: 'chrome',
     chromeOptions: { args: [ '--disable-popup-blocking', '--disable-translate', '--headless' ] }
   },
   skipSourceMapSupport: true,
-
+  directConnect: true,
   maxSessions: 15,
   allScriptsTimeout: 600000,
   getPageTimeout: 600000,
@@ -39,12 +38,12 @@ exports.config = {
 
   // highlightDelay: 100,
 
-  framework: 'jasmine2',
+  framework: 'jasmine',
   jasmineNodeOpts: {
     showColors: true,
     defaultTimeoutInterval: 240000,
     print: function() {}
-  },
+  }
 
-  SELENIUM_PROMISE_MANAGER: false
+  // SELENIUM_PROMISE_MANAGER: false
 };

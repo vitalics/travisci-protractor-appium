@@ -8,11 +8,11 @@
         "strictNullChecks": true,
         "baseUrl": "./test",
         "rootDirs": [
-            "./test"
+            "./test",
+            "./config"
         ],
         "lib": [
             "dom",
-            "webworker",
             "es5",
             "es6",
             "es7",
@@ -22,6 +22,6 @@
         ]
     },
     "exclude": [
-        "node_modules",
+        "node_modules"
     ]
 }
